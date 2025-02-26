@@ -33,7 +33,7 @@ Input: nums = [1,1,1,3,3,4,3,2,4,2]
 Output: true
 ```
 
-Line : [Click here](https://leetcode.com/problems/contains-duplicate/description/)
+Link : [Click here](https://leetcode.com/problems/contains-duplicate/description/)
 
 ### Solution : 
 
@@ -112,8 +112,14 @@ The function `numSet.find(n)` is used to check if the element `n` exists in the 
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        unordered_set<int> numSet(nums.begin(), nums.end());
+        unordered_set<int> numSet(nums.begin(), nums.end()); 
         return numSet.size() < nums.size();        
     }
 };
 ```
+
+**NOTE :** Creates an unordered_set named numSet and initializes it with all elements of nums:
+
+- `nums.begin()` and `nums.end()` define the range of elements copied from nums into `numSet`.
+
+- `unordered_set` only stores unique elements, meaning duplicates are automatically removed.
